@@ -4,6 +4,10 @@ const config = {
   root: 'src/',
   base: '/systems/svnsea2e/',
   publicDir:  path.resolve(__dirname, 'public'),
+  esbuild: {
+    // Fix rendering with broken sheet Ids caused by minifier.
+    keepNames: true,
+  },
   server: {
     port: 30001,
     open: true,
